@@ -1,0 +1,13 @@
+{
+    "name": "monorepo",
+    "version": "1.0.0",
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "*"
+        ]
+    },
+    "dependencies": {
+        "@backend/mylib": "workspace:*",
+        "uuid": "^11.1.0"
+    }
+}
