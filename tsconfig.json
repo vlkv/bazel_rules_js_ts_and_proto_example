@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/node16-strictest/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "target": "ES2017",
+    "module": "ES2022",
+    "lib": ["es2022", "DOM", "WebWorker", "DOM.Iterable"],
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"],
+  "paths": {
+    "@backend/mylib": ["backend/mylib/src"]
+  }
+}

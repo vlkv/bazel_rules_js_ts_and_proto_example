@@ -23,6 +23,8 @@ pnpm = use_extension("@aspect_rules_js//npm:extensions.bzl", "pnpm")
 use_repo(pnpm, "pnpm")  # 8.6.7
 
 bazel_dep(name = "aspect_rules_ts", version = "3.6.0")
+bazel_dep(name = "aspect_rules_swc", version = "2.4.3")
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
 
 rules_ts_ext = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext", dev_dependency = True)
 rules_ts_ext.deps(
