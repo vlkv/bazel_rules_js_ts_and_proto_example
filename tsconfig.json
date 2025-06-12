@@ -8,11 +8,7 @@
     "module": "ES2022",
     "lib": ["es2022", "DOM", "WebWorker", "DOM.Iterable"],
     "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@backend/mylib": ["backend/mylib/src"],
-      "@backend/mylib/*": ["backend/mylib/src/*"]
-    }
+    "baseUrl": "."
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }
