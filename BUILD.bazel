@@ -1,7 +1,6 @@
 load("@aspect_rules_js//js:defs.bzl", "js_library")
 load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
 load("@npm//:defs.bzl", "npm_link_all_packages")
-load("@npm//:tsconfig-to-swcconfig/package_json.bzl", tsconfig_to_swcconfig = "bin")
 
 npm_link_all_packages(name = "node_modules")
 
@@ -13,13 +12,6 @@ ts_config(
     deps = [
         "//:node_modules/@tsconfig/node16-strictest",  #keep
     ],
-)
-
-tsconfig_to_swcconfig.t2s(
-    name = "write_swcrc",
-    srcs = ["tsconfig.json"],
-    stdout = ".swcrc",
-    visibility = ["//:__subpackages__"],
 )
 
 js_library(
