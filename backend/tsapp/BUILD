@@ -15,7 +15,7 @@ ts_project(
     allow_js = True,
     supports_workers = 0,
     deps = [
-        "//:node_modules/@backend/mylib",
+        "//:node_modules/@backend/jslib",
         "//:node_modules/@types/node",
     ],
     visibility = ["//visibility:public"],

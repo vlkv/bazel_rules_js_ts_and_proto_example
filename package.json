@@ -12,7 +12,7 @@
         "typescript": "4.9.3"
     },
     "dependencies": {
-        "@backend/mylib": "workspace:*",
+        "@backend/jslib": "workspace:*",
         "uuid": "^11.1.0"
     }
 }

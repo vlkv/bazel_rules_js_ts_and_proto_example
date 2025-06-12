@@ -1,5 +1,5 @@
 {
-    "name": "@backend/myapp",
+    "name": "@backend/jslib",
     "version": "1.0.0",
     "main": "src/index.js"
 }
