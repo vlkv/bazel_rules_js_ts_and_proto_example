@@ -6,6 +6,7 @@ load("@aspect_rules_js//js:defs.bzl", "js_library")
 js_library(
     name = "lib",
     srcs = [
+        "src/index.d.ts",
         "src/index.js",
         "src/mylib.js",
     ],

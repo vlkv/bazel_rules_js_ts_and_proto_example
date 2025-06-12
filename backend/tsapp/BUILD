@@ -1,7 +1,6 @@
 load("@aspect_rules_js//js:defs.bzl", "js_library", "js_binary")
 load("@npm//:defs.bzl", "npm_link_all_packages")
-# load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
-load("//:defs.bzl", "ts_project")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
 
 npm_link_all_packages(name = "node_modules")
 
@@ -12,8 +11,9 @@ ts_project(
     ],
     declaration = True,
     tsconfig = "//:tsconfig",
-    # transpiler = "tsc",
+    transpiler = "tsc",
     allow_js = True,
+    supports_workers = 0,
     deps = [
         "//:node_modules/@backend/mylib",
         "//:node_modules/@types/node",

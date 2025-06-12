@@ -7,10 +7,12 @@
     "target": "ES2017",
     "module": "ES2022",
     "lib": ["es2022", "DOM", "WebWorker", "DOM.Iterable"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@backend/mylib": ["backend/mylib/src"],
+      "@backend/mylib/*": ["backend/mylib/src/*"]
+    }
   },
   "exclude": ["node_modules"],
-  "paths": {
-    "@backend/mylib": ["backend/mylib/src"]
-  }
 }
