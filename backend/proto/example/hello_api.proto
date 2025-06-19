@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package example;
+
+
+import "google/protobuf/descriptor.proto";
+import "example/thing.proto";
+
+extend google.protobuf.MethodOptions {
+    string http = 72295728;
+}
+
+message HelloRequest {
+    string name = 1;
+  }
+  message HelloReply {
+    string reply = 1;
+  }
+
+  service HelloServer {
+    rpc sayHello (HelloRequest) returns (HelloReply) {}
+  }

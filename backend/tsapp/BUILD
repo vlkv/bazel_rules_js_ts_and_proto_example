@@ -16,7 +16,11 @@ ts_project(
     supports_workers = 0,
     deps = [
         "//:node_modules/@backend/jslib",
+        "//backend/proto:proto_files_lib",
+        "//:node_modules/@bazel/runfiles",
         "//:node_modules/@types/node",
+        "//:node_modules/@grpc/grpc-js",
+        "//:node_modules/@grpc/proto-loader",
     ],
     visibility = ["//visibility:public"],
 )
