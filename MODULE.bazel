@@ -13,6 +13,15 @@ npm.npm_translate_lock(
     name = "npm",
     npm_package_target_name = "pkg",
     pnpm_lock = "//:pnpm-lock.yaml",
+    data = [
+        "//:package.json",
+        "//:pnpm-workspace.yaml",
+        "//backend/jsapp:package.json",
+        "//backend/jslib:package.json",
+        "//backend/proto:package.json",
+        "//backend/tsapp:package.json",
+    ],
+    update_pnpm_lock = True,
 )
 use_repo(npm, "npm")
 

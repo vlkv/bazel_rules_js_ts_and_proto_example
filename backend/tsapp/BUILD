@@ -16,6 +16,7 @@ ts_project(
     supports_workers = 0,
     deps = [
         "//:node_modules/@backend/jslib",
+        "//:node_modules/@backend/proto",
         "//backend/proto:proto_files_lib",
         "//:node_modules/@bazel/runfiles",
         "//:node_modules/@types/node",

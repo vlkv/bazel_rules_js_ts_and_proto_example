@@ -367,7 +367,7 @@
     },
     "@@aspect_rules_js+//npm:extensions.bzl%pnpm": {
       "general": {
-        "bzlTransitiveDigest": "ri+s+eblzrN6Xae8GV8m+dCgeO1acuUzZ92MrP+lH7Y=",
+        "bzlTransitiveDigest": "3N62RcVPqcS2/Oho86IEwz9vpu7+U0skAD/s1Ydj7IQ=",
         "usagesDigest": "7GvoAhVpBqU2RMYiz3JUs6vdxd6OyzbcW2shhGyQqV0=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -485,7 +485,7 @@
         "bzlTransitiveDigest": "5OYPlsMr3+wbJwt66EtdDKuQNIG/wvKMky46IzXJUa4=",
         "usagesDigest": "lo08ysCIqOVkEKXQ2LrCGRdj0ak5GNGGaExsQp4fCWI=",
         "recordedFileInputs": {
-          "@@//package.json": "2179705204c94d47f4a152aa6c13b2a7f22435cc20c50cf3c7fbd685f255bc85"
+          "@@//package.json": "6947be540fba545371fac553e617b3474f1abb1efd6466d8a7db991b36e9b94c"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},

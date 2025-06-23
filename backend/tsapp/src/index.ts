@@ -2,14 +2,10 @@ import { generate_uuid as gu } from '@backend/jslib';
 import { loadPackageDefinition } from '@grpc/grpc-js';
 import { loadSync } from '@grpc/proto-loader';
 import { runfiles } from '@bazel/runfiles';
+import type { Thing } from '@backend/proto/gen/example/Thing';
 
 const thingProtoPath = runfiles.resolveWorkspaceRelative('backend/proto/example/thing.proto');
 console.log('Proto path:', thingProtoPath);
-
-// output all envs
-for (const [key, value] of Object.entries(process.env)) {
-    console.log(`${key}=${value}`);
-}
 
 const protoDef = loadSync(runfiles.resolveWorkspaceRelative('backend/proto/example/thing.proto'), {
     keepCase: true,
@@ -22,5 +18,9 @@ const protoDef = loadSync(runfiles.resolveWorkspaceRelative('backend/proto/examp
 let proto = (loadPackageDefinition(protoDef)['example'] as any);
 console.log('proto has: ' + Object.keys(proto));
 
+let th: Thing = {
+    name: "123",
+    // sdfdf: 123,
+};
 let id: string = gu();
-console.log("Hello, from TypeScript app! Generated id=" + id);
+console.log("Hello, from TypeScript app! Generated id=" + id + " th.name=" + th.name);
