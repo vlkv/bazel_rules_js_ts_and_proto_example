@@ -11,8 +11,14 @@ Also, you may need to edit `proto_loader_gen_types.sh` this script adding more *
 See lines similar to:
 ```bash
 do_gen_types "example/hello_api.proto"
-do_gen_types "example/something_else_api.proto"
-do_gen_types "example/etc_api.proto"
+do_gen_types "other/other_api.proto"
+# ...
+```
+After you edit `proto_loader_gen_types.sh`, you have to edit `index.d.ts` too, to add re-export lines similar to:
+```ts
+export type * as hello_api from 'hello_api';
+export type * as other_api from 'other_api';
+// ...
 ```
 
 TODO: Add some test rule, that may generate those *.proto -> *.ts files at runtime and then compare them with

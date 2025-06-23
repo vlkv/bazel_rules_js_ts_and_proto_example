@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package other;
+
+
+message OtherRequest {
+    string name = 1;
+  }
+  message OtherResponse {
+    string msg = 1;
+  }
+
+  service OtherApi {
+    rpc doOtherStuff (OtherRequest) returns (OtherResponse) {}
+  }

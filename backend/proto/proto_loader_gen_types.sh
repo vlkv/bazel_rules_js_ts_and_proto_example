@@ -15,5 +15,6 @@ do_gen_types() {
 }
 
 do_gen_types "example/hello_api.proto"
+do_gen_types "other/other_api.proto"
 # TODO: Add here more *_api.proto files to generate types for them,
 # you don't have to list all *.proto files here, just the 'leaf' nodes (those, containing APIs).
