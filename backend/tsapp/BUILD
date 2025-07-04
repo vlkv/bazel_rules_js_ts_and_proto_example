@@ -1,4 +1,4 @@
-load("@aspect_rules_js//js:defs.bzl", "js_library", "js_binary")
+load("@aspect_rules_js//js:defs.bzl", "js_library", "js_binary", "js_image_layer")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
 
@@ -29,7 +29,6 @@ ts_project(
 js_library(
     name = "pkg",
     srcs = ["package.json"],
-    visibility = ["//visibility:public"],
     deps = [":lib"],
 )
 
@@ -40,4 +39,18 @@ js_binary(
     ],
     visibility = ["//visibility:public"],
     entry_point = "src/index.js",
+)
+
+# This rule creates several *.tar.gz files:
+#   bazel-bin/backend/tsapp/layers_node.tar.gz
+#   bazel-bin/backend/tsapp/layers_package_store_3p.tar.gz
+#   bazel-bin/backend/tsapp/layers_package_store_1p.tar.gz
+#   bazel-bin/backend/tsapp/layers_node_modules.tar.gz
+#   bazel-bin/backend/tsapp/layers_app.tar.gz
+# unpack all of them to ./dist and you will have a working distribution of tsapp.
+# ALSO: You may use rules_oci to build docker images.
+js_image_layer(
+    name = "layers",
+    binary = ":main",
+    visibility = ["//visibility:public"],
 )

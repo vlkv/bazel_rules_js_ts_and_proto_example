@@ -23,3 +23,6 @@ export type * as other_api from 'other_api';
 
 TODO: Add some test rule, that may generate those *.proto -> *.ts files at runtime and then compare them with
 the commited ones.
+
+
+TODO: Use method from https://dev.to/bazel/bazel-can-write-to-the-source-folder-b9b

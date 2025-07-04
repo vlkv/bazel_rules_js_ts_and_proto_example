@@ -6,10 +6,10 @@ package other;
 message OtherRequest {
     string name = 1;
   }
-  message OtherResponse {
+message OtherResponse {
     string msg = 1;
-  }
+}
 
-  service OtherApi {
+service OtherApi {
     rpc doOtherStuff (OtherRequest) returns (OtherResponse) {}
-  }
+}
