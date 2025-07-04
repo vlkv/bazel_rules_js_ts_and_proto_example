@@ -1,4 +1,4 @@
-// Original file: backend/proto/example/hello_api.proto
+// Original file: backend/proto/example/thing/hello_api.proto
 
 
 export interface HelloReply {

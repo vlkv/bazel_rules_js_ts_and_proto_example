@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package other;
+package example.other;
 
 
 message OtherRequest {

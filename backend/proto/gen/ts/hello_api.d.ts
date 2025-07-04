@@ -1,7 +1,7 @@
 import type * as grpc from '@grpc/grpc-js';
 import type { EnumTypeDefinition, MessageTypeDefinition } from '@grpc/proto-loader';
 
-import type { HelloServerClient as _example_HelloServerClient, HelloServerDefinition as _example_HelloServerDefinition } from './example/HelloServer';
+import type { HelloServerClient as _example_thing_HelloServerClient, HelloServerDefinition as _example_thing_HelloServerDefinition } from './example/thing/HelloServer';
 
 type SubtypeConstructor<Constructor extends new (...args: any) => any, Subtype> = {
   new(...args: ConstructorParameters<Constructor>): Subtype;
@@ -9,10 +9,12 @@ type SubtypeConstructor<Constructor extends new (...args: any) => any, Subtype> 
 
 export interface ProtoGrpcType {
   example: {
-    HelloReply: MessageTypeDefinition
-    HelloRequest: MessageTypeDefinition
-    HelloServer: SubtypeConstructor<typeof grpc.Client, _example_HelloServerClient> & { service: _example_HelloServerDefinition }
-    Thing: MessageTypeDefinition
+    thing: {
+      HelloReply: MessageTypeDefinition
+      HelloRequest: MessageTypeDefinition
+      HelloServer: SubtypeConstructor<typeof grpc.Client, _example_thing_HelloServerClient> & { service: _example_thing_HelloServerDefinition }
+      Thing: MessageTypeDefinition
+    }
   }
   google: {
     protobuf: {

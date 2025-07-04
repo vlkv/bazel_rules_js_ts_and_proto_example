@@ -1,4 +1,4 @@
-// Original file: backend/proto/other/other_api.proto
+// Original file: backend/proto/example/other/other_api.proto
 
 
 export interface OtherRequest {

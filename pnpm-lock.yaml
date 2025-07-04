@@ -16,7 +16,7 @@ importers:
         version: link:backend/jslib
       '@backend/proto':
         specifier: workspace:*
-        version: link:backend/proto
+        version: link:backend/proto/gen/ts
       '@bazel/runfiles':
         specifier: ^6.3.1
         version: 6.3.1
@@ -44,7 +44,7 @@ importers:
 
   backend/jslib: {}
 
-  backend/proto: {}
+  backend/proto/gen/ts: {}
 
   backend/tsapp: {}
 

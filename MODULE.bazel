@@ -18,7 +18,7 @@ npm.npm_translate_lock(
         "//:pnpm-workspace.yaml",
         "//backend/jsapp:package.json",
         "//backend/jslib:package.json",
-        "//backend/proto:package.json",
+        "//backend/proto/gen/ts:package.json",
         "//backend/tsapp:package.json",
     ],
     update_pnpm_lock = True,

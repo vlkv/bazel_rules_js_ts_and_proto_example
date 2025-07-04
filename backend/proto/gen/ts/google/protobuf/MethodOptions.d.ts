@@ -26,7 +26,7 @@ export interface MethodOptions {
   'idempotencyLevel'?: (_google_protobuf_MethodOptions_IdempotencyLevel);
   'features'?: (_google_protobuf_FeatureSet | null);
   'uninterpretedOption'?: (_google_protobuf_UninterpretedOption)[];
-  '.example.http'?: (string);
+  '.example.thing.http'?: (string);
 }
 
 export interface MethodOptions__Output {
@@ -34,5 +34,5 @@ export interface MethodOptions__Output {
   'idempotencyLevel': (_google_protobuf_MethodOptions_IdempotencyLevel__Output);
   'features': (_google_protobuf_FeatureSet__Output | null);
   'uninterpretedOption': (_google_protobuf_UninterpretedOption__Output)[];
-  '.example.http': (string);
+  '.example.thing.http': (string);
 }

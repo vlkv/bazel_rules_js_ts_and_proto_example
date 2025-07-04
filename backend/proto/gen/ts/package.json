@@ -1,5 +1,5 @@
 {
     "name": "@backend/proto",
     "version": "1.0.0",
-    "types": "gen/index.d.ts"
+    "types": "index.d.ts"
 }

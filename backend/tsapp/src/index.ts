@@ -2,18 +2,18 @@ import { generate_uuid as gu } from '@backend/jslib';
 import { loadPackageDefinition } from '@grpc/grpc-js';
 import { loadSync } from '@grpc/proto-loader';
 import { runfiles } from '@bazel/runfiles';
-import type { Thing } from '@backend/proto/gen/example/Thing';
+import type { Thing } from '@backend/proto/example/thing/Thing';
 
-const thingProtoPath = runfiles.resolveWorkspaceRelative('backend/proto/example/thing.proto');
+const thingProtoPath = runfiles.resolveWorkspaceRelative('backend/proto/example/thing/thing.proto');
 console.log('Proto path:', thingProtoPath);
 
-const protoDef = loadSync(runfiles.resolveWorkspaceRelative('backend/proto/example/thing.proto'), {
+const protoDef = loadSync(runfiles.resolveWorkspaceRelative('backend/proto/example/thing/thing.proto'), {
     keepCase: true,
     longs: String,
     enums: Number,
     defaults: true,
     oneofs: true,
-    includeDirs: [runfiles.resolveWorkspaceRelative('backend/proto/example/')],
+    includeDirs: [runfiles.resolveWorkspaceRelative('backend/proto/')],
 });
 let proto = (loadPackageDefinition(protoDef)['example'] as any);
 console.log('proto has: ' + Object.keys(proto));
