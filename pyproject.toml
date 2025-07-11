@@ -1,0 +1,10 @@
+[project]
+name = "bazel_js_ts_example"
+version = "1.0.0"
+requires-python = ">=3.11"
+
+# NOTE: After you edit dependencies, call `bazel run //:requirements.update` to update requirements_lock.txt file
+dependencies = [
+    "requests",
+    "pytest",
+]
