@@ -58,3 +58,15 @@ protoc.toolchain(
     version = "v27.1",
 )
 bazel_dep(name = "googleapis", version = "0.0.0-20241220-5e258e33.bcr.1")
+
+
+
+bazel_dep(name = "rules_python", version = "1.5.1")
+
+pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip.parse(
+    hub_name = "pypi",
+    python_version = "3.11",
+    requirements_lock = "//:requirements_lock.txt",
+)
+use_repo(pip, "pypi")

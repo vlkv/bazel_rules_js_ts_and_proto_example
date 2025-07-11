@@ -1,9 +1,9 @@
-load("@aspect_rules_js//js:defs.bzl", "js_library")
-load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 
 npm_link_all_packages(name = "node_modules")
 
+
+load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
 
 ts_config(
     name = "tsconfig",
@@ -14,8 +14,22 @@ ts_config(
     ],
 )
 
+
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+
 js_library(
     name = "pkg",
     srcs = ["package.json"],
     visibility = ["//visibility:public"],
+)
+
+
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+# Read more: https://rules-python.readthedocs.io/en/latest/pypi/lock.html
+# Use `bazel run //:requirements.update` to update requirements_lock.txt file
+# Use `bazel run //:requirements.test` to test that it is up to date
+compile_pip_requirements(
+    name = "requirements",
+    src = "pyproject.toml",
+    requirements_txt = "requirements_lock.txt",
 )
