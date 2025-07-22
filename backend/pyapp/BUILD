@@ -5,6 +5,7 @@ py_binary(
   srcs = ["main.py"],
   deps = [
       "@pypi//requests",
+      "//backend/proto/example/other:other_python_grpc_proto",
   ]
 )
 

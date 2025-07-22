@@ -7,6 +7,7 @@ proto_library(
         "//backend/proto/example/thing:thing_proto",
         "//backend/proto/example/other:other_proto",
     ],
+    strip_import_prefix = "/backend/proto",
     visibility = ["//visibility:public"],
 )
 
