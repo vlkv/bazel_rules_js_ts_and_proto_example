@@ -70,3 +70,5 @@ pip.parse(
     requirements_lock = "//:requirements_lock.txt",
 )
 use_repo(pip, "pypi")
+
+bazel_dep(name = "rules_proto_grpc_python", version = "5.5.0")

@@ -6,6 +6,7 @@ proto_library(
     deps = [
         "//backend/proto/example:example_proto",
     ],
+    strip_import_prefix = "/backend/proto",
 )
 
 # NOTE: We need to wrap filegroup with a js_library because ts_project on the other side does not allow to use

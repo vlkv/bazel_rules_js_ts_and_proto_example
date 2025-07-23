@@ -10,11 +10,26 @@ proto_library(
         "@protobuf//:any_proto",
         "@protobuf//:descriptor_proto",
     ],
+    strip_import_prefix = "/backend/proto",
     visibility = ["//visibility:public"],
 )
 
 js_library(
     name = "other_raw_proto",
     srcs = glob(["**/*.proto"]),
+    visibility = ["//visibility:public"],
+)
+
+
+
+load("@rules_proto_grpc_python//:defs.bzl", "python_grpc_library")
+
+python_grpc_library(
+    name = "other_python_grpc_proto",
+    protos = [
+        ":other_proto",
+    ],
+    deps = [
+    ],
     visibility = ["//visibility:public"],
 )
