@@ -5,7 +5,6 @@ py_binary(
   srcs = ["main.py"],
   deps = [
       "@pypi//requests",
-      "//backend/proto/example/other:other_python_grpc_proto",
   ]
 )
 
@@ -18,5 +17,9 @@ pytest_test(
     ],
     deps = [
         ":main",
+        "//backend/proto/example/thing:thing_python_grpc_proto",
+        "//backend/proto/example/other:other_python_grpc_proto",
+        # TODO: Need some sort of a mega-library that includes both thing and other stuff:
+        # "//backend/proto/example:example_python_grpc_proto",
     ],
 )
