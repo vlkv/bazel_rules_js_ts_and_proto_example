@@ -22,4 +22,5 @@ pytest_test(
         # TODO: Need some sort of a mega-library that includes both thing and other stuff:
         # "//backend/proto/example:example_python_grpc_proto",
     ],
+    imports = ["."],
 )

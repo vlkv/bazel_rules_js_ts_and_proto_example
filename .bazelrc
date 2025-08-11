@@ -1,6 +1,12 @@
+# Useful stuf:
+# https://blog.aspect.build/bazelrc-flags
+
 build --cxxopt=-std=c++20
 
 # https://github.com/rules-proto-grpc/rules_proto_grpc/issues/390
 build --noincompatible_disallow_ctx_resolve_tools
 
 common --@aspect_rules_ts//ts:skipLibCheck=honor_tsconfig
+
+# https://dev.to/nioan/resolving-python-import-failures-in-bazel-with-protolibrary-targets-4i8i
+build --incompatible_default_to_explicit_init_py
