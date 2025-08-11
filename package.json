@@ -17,6 +17,12 @@
         "@bazel/runfiles": "^6.3.1",
         "@grpc/grpc-js": "^1.13.4",
         "@grpc/proto-loader": "^0.7.15",
+        "@jest/core": "^30.0.5",
+        "@types/jest": "^30.0.0",
+        "jest": "^30.0.5",
+        "jest-cli": "^30.0.5",
+        "jest-haste-map": "^30.0.5",
+        "jest-junit": "^16.0.0",
         "uuid": "^11.1.0"
     }
 }

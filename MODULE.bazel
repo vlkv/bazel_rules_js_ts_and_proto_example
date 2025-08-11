@@ -1,3 +1,5 @@
+
+bazel_dep(name = "aspect_bazel_lib", version = "2.20.0")
 bazel_dep(name = "aspect_rules_js", version = "2.3.7")
 
 ####### Node.js version #########
@@ -31,8 +33,11 @@ pnpm = use_extension("@aspect_rules_js//npm:extensions.bzl", "pnpm")
 # bazel run -- @pnpm --dir /home/runner/work/rules_js/rules_js install
 use_repo(pnpm, "pnpm")  # 8.6.7
 
+bazel_dep(name = "aspect_rules_jest", version = "0.23.2")
+
+
 bazel_dep(name = "aspect_rules_ts", version = "3.6.0")
-bazel_dep(name = "bazel_skylib", version = "1.7.1")
+bazel_dep(name = "bazel_skylib", version = "1.8.1")
 
 rules_ts_ext = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext", dev_dependency = True)
 rules_ts_ext.deps(
@@ -44,11 +49,11 @@ use_repo(rules_ts_ext, "npm_typescript")
 
 
 
-bazel_dep(name = "protobuf", version = "30.2")
-bazel_dep(name = "grpc", version = "1.72.0")
+bazel_dep(name = "protobuf", version = "31.1")
+bazel_dep(name = "grpc", version = "1.73.1")
 bazel_dep(name = "rules_proto", version = "7.1.0")
-bazel_dep(name = "rules_proto_grpc", version = "5.0.1")
-bazel_dep(name = "toolchains_protoc", version = "0.4.1")
+bazel_dep(name = "rules_proto_grpc", version = "5.5.0")
+bazel_dep(name = "toolchains_protoc", version = "0.4.3")
 # Prevent version skew by matching protoc version to protobuf version, as C++ is the only lang that
 # has no cross-version runtime guarantee:
 # https://protobuf.dev/support/cross-version-runtime-guarantee/#cpp
