@@ -30,10 +30,5 @@ jest_test(
     config = "jest.config.js",
     data = [
         "test/tmp.test.js",
-        "//:node_modules/jest",
-        "//:node_modules/@jest/core",
-        "//:node_modules/jest-cli",
-        "//:node_modules/jest-junit",
-        "//:node_modules/jest-haste-map",
     ],
 )
