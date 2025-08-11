@@ -10,3 +10,6 @@ common --@aspect_rules_ts//ts:skipLibCheck=honor_tsconfig
 
 # https://dev.to/nioan/resolving-python-import-failures-in-bazel-with-protolibrary-targets-4i8i
 build --incompatible_default_to_explicit_init_py
+
+# See https://blog.engflow.com/2023/09/18/bazel-testing-tips/
+test --test_output=all
