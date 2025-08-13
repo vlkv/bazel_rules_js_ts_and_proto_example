@@ -1,4 +1,4 @@
-module(name = "bazel_monorepo_example")
+module(name = "monorepo")
 
 bazel_dep(name = "aspect_bazel_lib", version = "2.20.0")
 bazel_dep(name = "aspect_rules_js", version = "2.3.7")

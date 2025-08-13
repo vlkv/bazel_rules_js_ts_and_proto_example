@@ -1,3 +1,3 @@
-module example.com/backend
+module monorepo.local
 
 go 1.24.1
