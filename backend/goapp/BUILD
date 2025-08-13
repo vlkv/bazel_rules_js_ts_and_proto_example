@@ -8,6 +8,7 @@ go_library(
     deps = [
         "//backend/golib/fortune",
         "@com_github_google_uuid//:uuid",
+        "@com_github_shopspring_decimal//:decimal",
     ],
 )
 
