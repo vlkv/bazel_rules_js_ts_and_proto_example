@@ -7,7 +7,7 @@ go_library(
     visibility = ["//visibility:private"],
     deps = [
         "//backend/golib/fortune",
-        "@com_github_google_uuid//:go_default_library",
+        "@com_github_google_uuid//:uuid",
     ],
 )
 
