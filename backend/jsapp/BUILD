@@ -22,7 +22,7 @@ js_library(
 )
 
 js_binary(
-    name = "main",
+    name = "jsapp",
     data = [
         ":pkg",
     ],
