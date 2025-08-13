@@ -1,6 +1,6 @@
-load("@npm//:defs.bzl", "npm_link_all_packages")
-load("@aspect_rules_js//js:defs.bzl", "js_library")
 load("@aspect_rules_jest//jest:defs.bzl", "jest_test")
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+load("@npm//:defs.bzl", "npm_link_all_packages")
 
 npm_link_all_packages(name = "node_modules")
 
@@ -11,10 +11,10 @@ js_library(
         "src/index.js",
         "src/jslib.js",
     ],
+    visibility = ["//visibility:public"],
     deps = [
         "//:node_modules/uuid",
     ],
-    visibility = ["//visibility:public"],
 )
 
 js_library(
@@ -26,9 +26,9 @@ js_library(
 
 jest_test(
     name = "test",
-    node_modules = "//:node_modules",
     config = "jest.config.js",
     data = [
         "test/tmp.test.js",
     ],
+    node_modules = "//:node_modules",
 )

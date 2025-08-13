@@ -1,6 +1,6 @@
-load("@aspect_rules_js//js:defs.bzl", "js_library", "js_binary", "js_image_layer")
-load("@npm//:defs.bzl", "npm_link_all_packages")
+load("@aspect_rules_js//js:defs.bzl", "js_binary", "js_image_layer", "js_library")
 load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
+load("@npm//:defs.bzl", "npm_link_all_packages")
 
 npm_link_all_packages(name = "node_modules")
 
@@ -9,21 +9,21 @@ ts_project(
     srcs = [
         "src/index.ts",
     ],
-    declaration = True,
-    tsconfig = "//:tsconfig",
-    transpiler = "tsc",
     allow_js = True,
+    declaration = True,
     supports_workers = 0,
+    transpiler = "tsc",
+    tsconfig = "//:tsconfig",
+    visibility = ["//visibility:public"],
     deps = [
         "//:node_modules/@backend/jslib",
         "//:node_modules/@backend/proto",  # contains generated *.d.ts files from backend/proto/gen
-        "//backend/proto:proto_raw_proto",  # contains raw *.proto files needed for TypeScript runtime
         "//:node_modules/@bazel/runfiles",
-        "//:node_modules/@types/node",
         "//:node_modules/@grpc/grpc-js",
         "//:node_modules/@grpc/proto-loader",
+        "//:node_modules/@types/node",
+        "//backend/proto:proto_raw_proto",  # contains raw *.proto files needed for TypeScript runtime
     ],
-    visibility = ["//visibility:public"],
 )
 
 js_library(
@@ -37,8 +37,8 @@ js_binary(
     data = [
         ":pkg",
     ],
-    visibility = ["//visibility:public"],
     entry_point = "src/index.js",
+    visibility = ["//visibility:public"],
 )
 
 # This rule creates several *.tar.gz files:

@@ -1,4 +1,4 @@
-load("@aspect_rules_js//js:defs.bzl", "js_library", "js_binary")
+load("@aspect_rules_js//js:defs.bzl", "js_binary", "js_library")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 
 npm_link_all_packages(name = "node_modules")
@@ -8,10 +8,10 @@ js_library(
     srcs = [
         "src/index.js",
     ],
+    visibility = ["//visibility:public"],
     deps = [
         "//:node_modules/@backend/jslib",
     ],
-    visibility = ["//visibility:public"],
 )
 
 js_library(
@@ -26,6 +26,6 @@ js_binary(
     data = [
         ":pkg",
     ],
-    visibility = ["//visibility:public"],
     entry_point = "src/index.js",
+    visibility = ["//visibility:public"],
 )
