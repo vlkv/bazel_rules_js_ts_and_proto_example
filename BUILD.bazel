@@ -33,3 +33,8 @@ compile_pip_requirements(
     src = "pyproject.toml",
     requirements_txt = "requirements_lock.txt",
 )
+
+
+load("@gazelle//:def.bzl", "gazelle")
+
+gazelle(name = "gazelle")
