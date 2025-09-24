@@ -1,0 +1,67 @@
+# NOTE: This was taken from https://github.com/aspect-build/rules_lint/blob/4ba6e3f5299a02e93dd461a1716dd2d737b8be2a/example/tools/lint/BUILD.bazel
+"""Definition of the formatter binary
+
+This is in its own package because it has so many loading-time symbols,
+we don't want to trigger eager fetches of these for builds that don't want to run format.
+"""
+
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+load("@bazel_skylib//rules:native_binary.bzl", "native_binary")
+load("@npm//:eslint/package_json.bzl", eslint_bin = "bin")
+load("@rules_python//python/entry_points:py_console_script_binary.bzl", "py_console_script_binary")
+
+package(default_visibility = ["//:__subpackages__"])
+
+# ./bazelisk run //tools/lint:buf -- --help
+alias(
+    name = "buf",
+    actual = "@rules_buf_toolchains//:buf",
+)
+
+# ./bazelisk run //tools/lint:flake8 -- --help
+py_console_script_binary(
+    name = "flake8",
+    pkg = "@pypi//flake8:pkg",
+)
+
+# ./bazelisk run //tools/lint:eslint -- --help
+eslint_bin.eslint_binary(name = "eslint")
+
+# ./bazelisk run //tools/lint:clang_tidy -- --help
+# NOTE: Also you need jq: `sudo apt install jq`
+native_binary(
+    name = "clang_tidy",
+    src = select(
+        {
+            "@bazel_tools//src/conditions:linux_x86_64": "@llvm_toolchain_llvm//:bin/clang-tidy",
+            "@bazel_tools//src/conditions:linux_aarch64": "@llvm_toolchain_llvm//:bin/clang-tidy",
+            "@bazel_tools//src/conditions:darwin_x86_64": "@llvm_toolchain_llvm//:bin/clang-tidy",
+            "@bazel_tools//src/conditions:darwin_arm64": "@llvm_toolchain_llvm//:bin/clang-tidy",
+            # llvm_toolchain doesn't support windows: https://github.com/bazel-contrib/toolchains_llvm/issues/4
+            # as a workaround, you can download exes from
+            # https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.6 and make available locally.
+            "@bazel_tools//src/conditions:windows_x64": "clang-tidy.exe",
+        },
+    ),
+    out = "clang_tidy",
+)
+
+exports_files(
+    [
+        "buf.yaml",
+        ".flake8",
+        ".ruff.toml",
+        ".shellcheckrc",
+        ".clang-tidy",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+js_library(
+    name = "eslintrc",
+    srcs = ["eslint.config.mjs"],
+    deps = [
+        "//:node_modules/@eslint/js",
+        "//:node_modules/@typescript-eslint",
+    ],
+)

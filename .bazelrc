@@ -13,3 +13,17 @@ build --incompatible_default_to_explicit_init_py
 
 # See https://blog.engflow.com/2023/09/18/bazel-testing-tips/
 test --test_output=all
+
+
+
+######################
+# Linters
+# https://github.com/aspect-build/rules_lint/blob/v1.7.0/docs/linting.md#4-errors-during-bazel-build
+build --aspects=//tools/lint:linters.bzl%buf
+build --aspects=//tools/lint:linters.bzl%eslint
+build --aspects=//tools/lint:linters.bzl%flake8
+build --aspects=//tools/lint:linters.bzl%ruff
+build --aspects=//tools/lint:linters.bzl%shellcheck
+build --aspects=//tools/lint:linters.bzl%clang_tidy
+build --@aspect_rules_lint//lint:fail_on_violation
+
