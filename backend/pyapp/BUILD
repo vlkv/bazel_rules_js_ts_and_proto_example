@@ -2,8 +2,9 @@ load("@rules_python//python:defs.bzl", "py_binary")
 load("//backend/tools/pytest:pytest_test.bzl", "pytest_test")
 
 py_binary(
-    name = "main",
+    name = "pyapp",
     srcs = ["main.py"],
+    main = "main.py",
     deps = [
         "@pypi//requests",
     ],

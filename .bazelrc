@@ -27,3 +27,5 @@ build --aspects=//tools/lint:linters.bzl%shellcheck
 build --aspects=//tools/lint:linters.bzl%clang_tidy
 build --@aspect_rules_lint//lint:fail_on_violation
 
+# build --show_result=10
+# build --subcommands

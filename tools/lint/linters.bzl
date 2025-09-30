@@ -50,24 +50,11 @@ shellcheck = lint_shellcheck_aspect(
 
 shellcheck_test = lint_test(aspect = shellcheck)
 
+# See https://github.com/aspect-build/rules_lint/blob/0fa4d11d3b2124a999bf3f03ef35e13d046cd162/lint/clang_tidy.bzl#L412
 clang_tidy = lint_clang_tidy_aspect(
     binary = Label("//tools/lint:clang_tidy"),
-    configs = [
-        Label("//tools/lint:.clang-tidy"),
-    ],
-    lint_target_headers = True,
-    angle_includes_are_system = False,
+    global_config = [Label("//tools/lint:.clang-tidy")],
     verbose = True,
 )
 
 clang_tidy_test = lint_test(aspect = clang_tidy)
-
-# an example of setting up a different clang-tidy aspect with different
-# options. This one uses a single global clang-tidy file
-clang_tidy_global_config = lint_clang_tidy_aspect(
-    binary = "@@//tools/lint:clang_tidy",
-    global_config = "@@//:.clang-tidy",
-    lint_target_headers = True,
-    angle_includes_are_system = True,
-    verbose = False,
-)

@@ -33,7 +33,7 @@ js_library(
 )
 
 js_binary(
-    name = "main",
+    name = "tsapp",
     data = [
         ":pkg",
     ],
@@ -51,6 +51,6 @@ js_binary(
 # ALSO: You may use rules_oci to build docker images.
 js_image_layer(
     name = "layers",
-    binary = ":main",
+    binary = ":tsapp",
     visibility = ["//visibility:public"],
 )

@@ -562,10 +562,10 @@
     },
     "@@aspect_rules_ts+//ts:extensions.bzl%ext": {
       "general": {
-        "bzlTransitiveDigest": "5OYPlsMr3+wbJwt66EtdDKuQNIG/wvKMky46IzXJUa4=",
+        "bzlTransitiveDigest": "MTYrHsOSgiQcK2kWLEJXgQN+rPXhhAOe+aJ7E65JPKE=",
         "usagesDigest": "DxVelJDqc8V8fAaS67wEnjMNdCw+ux0hNjuLXozk8gI=",
         "recordedFileInputs": {
-          "@@//package.json": "20861a78314da7f96392883220a57a99a3e97d563adfe2f3555c20b0dd415fb3"
+          "@@//package.json": "deff456d5b86f11902689d6e933135cb30ff0bfa3615f3689d9d93a0349eb0a2"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
