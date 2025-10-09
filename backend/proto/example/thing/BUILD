@@ -10,12 +10,12 @@ proto_library(
         "hello_api.proto",
         "thing.proto",
     ],
+    strip_import_prefix = "/backend/proto",
     visibility = ["//visibility:public"],
     deps = [
         "@protobuf//:any_proto",
         "@protobuf//:descriptor_proto",
     ],
-    strip_import_prefix = "/backend/proto",
 )
 
 js_library(
@@ -30,8 +30,6 @@ python_grpc_library(
         ":thing_proto",
     ],
     visibility = ["//visibility:public"],
-    deps = [
-    ],
 )
 
 go_proto_library(

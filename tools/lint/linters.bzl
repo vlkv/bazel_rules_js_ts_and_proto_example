@@ -15,6 +15,8 @@ buf = lint_buf_aspect(
     config = Label("//tools/lint:buf.yaml"),
 )
 
+buf_test = lint_test(aspect = buf)
+
 eslint = lint_eslint_aspect(
     binary = Label("//tools/lint:eslint"),
     # ESLint will resolve the configuration file by looking in the working directory first.
