@@ -8,8 +8,8 @@ js_library(
     name = "lib",
     srcs = [
         "src/index.d.ts",
-        "src/index.js",
-        "src/jslib.js",
+        "src/index.mjs",
+        "src/jslib.mjs",
     ],
     visibility = ["//visibility:public"],
     deps = [
@@ -24,11 +24,17 @@ js_library(
     deps = [":lib"],
 )
 
+# See https://github.com/aspect-build/rules_jest/tree/main/example/esm
+# And this https://jestjs.io/docs/ecmascript-modules
 jest_test(
     name = "test",
-    config = "jest.config.js",
+    config = "jest.config.mjs",
     data = [
-        "test/tmp.test.js",
+        "test/jslib.test.mjs",
+        ":lib",
     ],
     node_modules = "//:node_modules",
+    node_options = [
+        "--experimental-vm-modules",
+    ],
 )

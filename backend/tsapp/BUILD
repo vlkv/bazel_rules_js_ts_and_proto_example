@@ -1,6 +1,7 @@
 load("@aspect_rules_js//js:defs.bzl", "js_binary", "js_image_layer", "js_library")
 load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
 load("@npm//:defs.bzl", "npm_link_all_packages")
+load("//tools/lint:linters.bzl", "eslint_test")
 
 npm_link_all_packages(name = "node_modules")
 
@@ -24,6 +25,11 @@ ts_project(
         "//:node_modules/@types/node",
         "//backend/proto:proto_raw_proto",  # contains raw *.proto files needed for TypeScript runtime
     ],
+)
+
+eslint_test(
+    name = "lint",
+    srcs = [":lib"],
 )
 
 js_library(

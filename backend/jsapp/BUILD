@@ -1,12 +1,13 @@
 load("@aspect_rules_js//js:defs.bzl", "js_binary", "js_library")
 load("@npm//:defs.bzl", "npm_link_all_packages")
+load("//tools/lint:linters.bzl", "eslint_test")
 
 npm_link_all_packages(name = "node_modules")
 
 js_library(
     name = "lib",
     srcs = [
-        "src/index.js",
+        "src/index.mjs",
     ],
     visibility = ["//visibility:public"],
     deps = [
@@ -26,6 +27,13 @@ js_binary(
     data = [
         ":pkg",
     ],
-    entry_point = "src/index.js",
+    entry_point = "src/index.mjs",
     visibility = ["//visibility:public"],
+)
+
+# NOTE: Unfortunately ./bazelisk build //backend/jsapp does not trigger eslint on :lib
+# That is why we have to manually do this!
+eslint_test(
+    name = "lint",
+    srcs = [":lib"],
 )

@@ -21,8 +21,9 @@ eslint = lint_eslint_aspect(
     # See https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file-resolution
     # We must also include any other config files we expect eslint to be able to locate, e.g. tsconfigs
     configs = [
-        Label("//tools/lint:eslintrc"),
+        Label("//:eslintrc"),
     ],
+    rule_kinds = ["js_library", "ts_project", "ts_project_rule"],
 )
 
 eslint_test = lint_test(aspect = eslint)
@@ -30,6 +31,7 @@ eslint_test = lint_test(aspect = eslint)
 flake8 = lint_flake8_aspect(
     binary = Label("//tools/lint:flake8"),
     config = Label("//tools/lint:.flake8"),
+    rule_kinds = ["py_library", "py_binary", "py_test"],
 )
 
 flake8_test = lint_test(aspect = flake8)

@@ -1,5 +1,6 @@
 {
     "name": "@backend/jsapp",
     "version": "1.0.0",
-    "main": "src/index.js"
+    "main": "src/index.mjs",
+    "type": "module"
 }
