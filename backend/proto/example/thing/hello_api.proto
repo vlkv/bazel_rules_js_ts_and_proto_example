@@ -1,22 +1,27 @@
 syntax = "proto3";
 
+// buf:lint:ignore PACKAGE_VERSION_SUFFIX
 package example.thing;
 
 
 import "google/protobuf/descriptor.proto";
 import "example/thing/thing.proto";
 
+
 extend google.protobuf.MethodOptions {
     string http = 72295728;
 }
 
 message HelloRequest {
-    string name = 1;
-  }
-  message HelloReply {
-    string reply = 1;
-  }
+  string name = 1;
+  Thing thing = 2;
+}
+message HelloReply {
+  string reply = 1;
+}
 
-  service HelloServer {
-    rpc sayHello (HelloRequest) returns (HelloReply) {}
-  }
+// buf:lint:ignore SERVICE_SUFFIX
+service HelloServer {
+  // buf:lint:ignore RPC_PASCAL_CASE
+  rpc sayHello (HelloRequest) returns (HelloReply) {}
+}
