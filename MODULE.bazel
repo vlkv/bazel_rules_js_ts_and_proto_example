@@ -105,7 +105,6 @@ register_toolchains(
     dev_dependency = True,
 )
 
-
 # Next, follow the install instructions for
 # - linting: https://github.com/aspect-build/rules_lint/blob/v1.7.0/docs/linting.md
 # - formatting: https://github.com/aspect-build/rules_lint/blob/v1.7.0/docs/formatting.md
@@ -113,7 +112,7 @@ bazel_dep(name = "aspect_rules_lint", version = "1.7.0")
 bazel_dep(name = "rules_buf", version = "0.5.2")
 
 buf = use_extension("@rules_buf//buf:extensions.bzl", "buf")
-buf.toolchains(version = "v1.57.2")  # see https://github.com/bufbuild/buf/releases
+buf.toolchains(version = "v1.58.0")  # see https://github.com/bufbuild/buf/releases
 use_repo(buf, "rules_buf_toolchains")
 
 bazel_dep(name = "toolchains_llvm", version = "1.5.0")

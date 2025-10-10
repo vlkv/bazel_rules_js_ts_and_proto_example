@@ -4,7 +4,16 @@ package example.thing;
 
 import "google/protobuf/any.proto";
 
+// buf:lint:ignore ENUM_VALUE_PREFIX
+enum ThingEnum {
+    // buf:lint:ignore ENUM_ZERO_VALUE_SUFFIX
+    UNSPECIFIED = 0;
+    ONE = 1;
+    TWO = 2;
+}
+
 message Thing {
     string name = 1;
     google.protobuf.Any payload = 2;
+    ThingEnum thing_enum = 3;
 }
