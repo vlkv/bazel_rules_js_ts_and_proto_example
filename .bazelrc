@@ -14,6 +14,8 @@ build --incompatible_default_to_explicit_init_py
 # See https://blog.engflow.com/2023/09/18/bazel-testing-tips/
 test --test_output=all
 
+# This is for buf lint comment ignores https://github.com/bufbuild/buf/issues/4046#issuecomment-3396085493
+build --experimental_proto_descriptor_sets_include_source_info
 
 
 ######################

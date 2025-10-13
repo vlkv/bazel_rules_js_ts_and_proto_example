@@ -16,12 +16,12 @@ message HelloRequest {
   string name = 1;
   Thing thing = 2;
 }
-message HelloReply {
+message SayHelloResponse {
   string reply = 1;
 }
 
 // buf:lint:ignore SERVICE_SUFFIX
 service HelloServer {
   // buf:lint:ignore RPC_PASCAL_CASE
-  rpc sayHello (HelloRequest) returns (HelloReply) {}
+  rpc sayHello (HelloRequest) returns (SayHelloResponse) {}
 }
