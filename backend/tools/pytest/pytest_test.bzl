@@ -1,3 +1,5 @@
+"pytest_test is a rule that runs pytest."
+
 load("@rules_python//python:defs.bzl", "py_test")
 
 # Taken from https://dev.to/davidb31/experimentations-on-bazel-python-3-linter-pytest-49oh

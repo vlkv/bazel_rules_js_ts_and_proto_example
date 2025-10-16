@@ -15,8 +15,7 @@
     "https://bcr.bazel.build/modules/abseil-cpp/20240722.0/MODULE.bazel": "88668a07647adbdc14cb3a7cd116fb23c9dda37a90a1681590b6c9d8339a5b84",
     "https://bcr.bazel.build/modules/abseil-cpp/20250127.0/MODULE.bazel": "d1086e248cda6576862b4b3fe9ad76a214e08c189af5b42557a6e1888812c5d5",
     "https://bcr.bazel.build/modules/abseil-cpp/20250127.1/MODULE.bazel": "c4a89e7ceb9bf1e25cf84a9f830ff6b817b72874088bf5141b314726e46a57c1",
-    "https://bcr.bazel.build/modules/abseil-cpp/20250512.1/MODULE.bazel": "d209fdb6f36ffaf61c509fcc81b19e81b411a999a934a032e10cd009a0226215",
-    "https://bcr.bazel.build/modules/abseil-cpp/20250512.1/source.json": "d725d73707d01bb46ab3ca59ba408b8e9bd336642ca77a2269d4bfb8bbfd413d",
+    "https://bcr.bazel.build/modules/abseil-cpp/20250127.1/source.json": "03c90ee57977264436d3231676dcddae116c4769a5d02b6fc16c2c9e019b583a",
     "https://bcr.bazel.build/modules/ape/1.0.1/MODULE.bazel": "37411cfd13bfc28cd264674d660a3ecb3b5b35b9dbe4c0b2be098683641b3fee",
     "https://bcr.bazel.build/modules/ape/1.0.1/source.json": "96bc5909d1e3ccc4203272815ef874dbfd99651e240c05049f12193d16c1110b",
     "https://bcr.bazel.build/modules/apple_support/1.11.1/MODULE.bazel": "1843d7cd8a58369a444fc6000e7304425fba600ff641592161d9f15b179fb896",
@@ -51,6 +50,8 @@
     "https://bcr.bazel.build/modules/aspect_rules_ts/3.6.0/source.json": "5593e3f1cd0dd5147f7748e163307fd5c2e1077913d6945b58739ad8d770a290",
     "https://bcr.bazel.build/modules/aspect_tools_telemetry/0.2.8/MODULE.bazel": "aa975a83e72bcaac62ee61ab12b788ea324a1d05c4aab28aadb202f647881679",
     "https://bcr.bazel.build/modules/aspect_tools_telemetry/0.2.8/source.json": "786cbc49377fb6bf4859aec5b1c61f8fc26b08e9fdb929e2dde2e1e2a406bd24",
+    "https://bcr.bazel.build/modules/bazel_env.bzl/0.5.0/MODULE.bazel": "116884119669ff3ced7535dc6ed5344f08d92cbc514cbcb474b2eb94c840b891",
+    "https://bcr.bazel.build/modules/bazel_env.bzl/0.5.0/source.json": "e88a7d73547512d987c37541ffe57ed6f946222d448a3117554bdff1ae816ef0",
     "https://bcr.bazel.build/modules/bazel_features/0.1.0/MODULE.bazel": "47011d645b0f949f42ee67f2e8775188a9cf4a0a1528aa2fa4952f2fd00906fd",
     "https://bcr.bazel.build/modules/bazel_features/1.0.0/MODULE.bazel": "d7f022dc887efb96e1ee51cec7b2e48d41e36ff59a6e4f216c40e4029e1585bf",
     "https://bcr.bazel.build/modules/bazel_features/1.1.0/MODULE.bazel": "cfd42ff3b815a5f39554d97182657f8c4b9719568eb7fded2b9135f084bf760b",
@@ -67,7 +68,8 @@
     "https://bcr.bazel.build/modules/bazel_features/1.28.0/MODULE.bazel": "4b4200e6cbf8fa335b2c3f43e1d6ef3e240319c33d43d60cc0fbd4b87ece299d",
     "https://bcr.bazel.build/modules/bazel_features/1.3.0/MODULE.bazel": "cdcafe83ec318cda34e02948e81d790aab8df7a929cec6f6969f13a489ccecd9",
     "https://bcr.bazel.build/modules/bazel_features/1.30.0/MODULE.bazel": "a14b62d05969a293b80257e72e597c2da7f717e1e69fa8b339703ed6731bec87",
-    "https://bcr.bazel.build/modules/bazel_features/1.30.0/source.json": "b07e17f067fe4f69f90b03b36ef1e08fe0d1f3cac254c1241a1818773e3423bc",
+    "https://bcr.bazel.build/modules/bazel_features/1.31.0/MODULE.bazel": "eca40770b202b2161c1e20be7f1c323c8836dc959ae48dcf02ee7a051ffe4e8e",
+    "https://bcr.bazel.build/modules/bazel_features/1.31.0/source.json": "ed96a7d1b0a388225c7c14549975e81bd35c9e8d5829d29fd39719bbf2f8c769",
     "https://bcr.bazel.build/modules/bazel_features/1.4.1/MODULE.bazel": "e45b6bb2350aff3e442ae1111c555e27eac1d915e77775f6fdc4b351b758b5d7",
     "https://bcr.bazel.build/modules/bazel_features/1.9.0/MODULE.bazel": "885151d58d90d8d9c811eb75e3288c11f850e1d6b481a8c9f766adee4712358b",
     "https://bcr.bazel.build/modules/bazel_features/1.9.1/MODULE.bazel": "8f679097876a9b609ad1f60249c49d68bfab783dd9be012faf9d82547b14815a",
@@ -91,7 +93,8 @@
     "https://bcr.bazel.build/modules/boringssl/0.20241024.0/MODULE.bazel": "b540cff73d948cb79cb0bc108d7cef391d2098a25adabfda5043e4ef548dbc87",
     "https://bcr.bazel.build/modules/boringssl/0.20241024.0/source.json": "d843092e682b84188c043ac742965d7f96e04c846c7e338187e03238674909a9",
     "https://bcr.bazel.build/modules/buildifier_prebuilt/6.4.0/MODULE.bazel": "37389c6b5a40c59410b4226d3bb54b08637f393d66e2fa57925c6fcf68e64bf4",
-    "https://bcr.bazel.build/modules/buildifier_prebuilt/6.4.0/source.json": "83eb01b197ed0b392f797860c9da5ed1bf95f4d0ded994d694a3d44731275916",
+    "https://bcr.bazel.build/modules/buildifier_prebuilt/8.2.0.2/MODULE.bazel": "a9b689711d5b69f9db741649b218c119b9fdf82924ba390415037e09798edd03",
+    "https://bcr.bazel.build/modules/buildifier_prebuilt/8.2.0.2/source.json": "51eb0a4b38aaaeab7fa64361576d616c4d8bfd0f17a0a10184aeab7084d79f8e",
     "https://bcr.bazel.build/modules/buildozer/7.1.2/MODULE.bazel": "2e8dd40ede9c454042645fd8d8d0cd1527966aa5c919de86661e62953cd73d84",
     "https://bcr.bazel.build/modules/buildozer/7.1.2/source.json": "c9028a501d2db85793a6996205c8de120944f50a0d570438fcae0457a5f9d1f8",
     "https://bcr.bazel.build/modules/c-ares/1.15.0/MODULE.bazel": "ba0a78360fdc83f02f437a9e7df0532ad1fbaa59b722f6e715c11effebaa0166",
@@ -136,8 +139,7 @@
     "https://bcr.bazel.build/modules/googletest/1.14.0/MODULE.bazel": "cfbcbf3e6eac06ef9d85900f64424708cc08687d1b527f0ef65aa7517af8118f",
     "https://bcr.bazel.build/modules/googletest/1.15.2/MODULE.bazel": "6de1edc1d26cafb0ea1a6ab3f4d4192d91a312fd2d360b63adaa213cd00b2108",
     "https://bcr.bazel.build/modules/googletest/1.16.0/MODULE.bazel": "a175623c69e94fca4ca7acbc12031e637b0c489318cd4805606981d4d7adb34a",
-    "https://bcr.bazel.build/modules/googletest/1.17.0/MODULE.bazel": "dbec758171594a705933a29fcf69293d2468c49ec1f2ebca65c36f504d72df46",
-    "https://bcr.bazel.build/modules/googletest/1.17.0/source.json": "38e4454b25fc30f15439c0378e57909ab1fd0a443158aa35aec685da727cd713",
+    "https://bcr.bazel.build/modules/googletest/1.16.0/source.json": "dd011b202542efcd4c0e3df34b1558d41598c6f287846728315ded5f7984b77a",
     "https://bcr.bazel.build/modules/grpc-java/1.62.2/MODULE.bazel": "99b8771e8c7cacb130170fed2a10c9e8fed26334a93e73b42d2953250885a158",
     "https://bcr.bazel.build/modules/grpc-java/1.66.0/MODULE.bazel": "86ff26209fac846adb89db11f3714b3dc0090fb2fb81575673cc74880cda4e7e",
     "https://bcr.bazel.build/modules/grpc-proto/0.0.0-20240627-ec30f58/MODULE.bazel": "88de79051e668a04726e9ea94a481ec6f1692086735fd6f488ab908b3b909238",
@@ -211,8 +213,7 @@
     "https://bcr.bazel.build/modules/protobuf/3.19.6/MODULE.bazel": "9233edc5e1f2ee276a60de3eaa47ac4132302ef9643238f23128fea53ea12858",
     "https://bcr.bazel.build/modules/protobuf/30.0/MODULE.bazel": "0e736de5d52ad7824113f47e65256a26ee74b689ba859c5447a0663e5a075409",
     "https://bcr.bazel.build/modules/protobuf/31.1/MODULE.bazel": "379a389bb330b7b8c1cdf331cc90bf3e13de5614799b3b52cdb7c6f389f6b38e",
-    "https://bcr.bazel.build/modules/protobuf/32.1/MODULE.bazel": "89cd2866a9cb07fee9ff74c41ceace11554f32e0d849de4e23ac55515cfada4d",
-    "https://bcr.bazel.build/modules/protobuf/32.1/source.json": "bd2664e90875c0cd755d1d9b7a103a4b027893ac8eafa3bba087557ffc244ad4",
+    "https://bcr.bazel.build/modules/protobuf/31.1/source.json": "25af5d0219da0c0fc4d1191a24ce438e6ca7f49d2e1a94f354efeba6ef10426f",
     "https://bcr.bazel.build/modules/protoc-gen-validate/1.0.4.bcr.2/MODULE.bazel": "c4bd2c850211ff5b7dadf9d2d0496c1c922fdedc303c775b01dfd3b3efc907ed",
     "https://bcr.bazel.build/modules/protoc-gen-validate/1.0.4/MODULE.bazel": "b8913c154b16177990f6126d2d2477d187f9ddc568e95ee3e2d50fc65d2c494a",
     "https://bcr.bazel.build/modules/protoc-gen-validate/1.2.1.bcr.1/MODULE.bazel": "4bf09676b62fa587ae07e073420a76ec8766dcce7545e5f8c68cfa8e484b5120",
@@ -350,7 +351,6 @@
     "https://bcr.bazel.build/modules/rules_python/0.4.0/MODULE.bazel": "9208ee05fd48bf09ac60ed269791cf17fb343db56c8226a720fbb1cdf467166c",
     "https://bcr.bazel.build/modules/rules_python/0.40.0/MODULE.bazel": "9d1a3cd88ed7d8e39583d9ffe56ae8a244f67783ae89b60caafc9f5cf318ada7",
     "https://bcr.bazel.build/modules/rules_python/1.0.0/MODULE.bazel": "898a3d999c22caa585eb062b600f88654bf92efb204fa346fb55f6f8edffca43",
-    "https://bcr.bazel.build/modules/rules_python/1.4.1/MODULE.bazel": "8991ad45bdc25018301d6b7e1d3626afc3c8af8aaf4bc04f23d0b99c938b73a6",
     "https://bcr.bazel.build/modules/rules_python/1.5.1/MODULE.bazel": "acfe65880942d44a69129d4c5c3122d57baaf3edf58ae5a6bd4edea114906bf5",
     "https://bcr.bazel.build/modules/rules_python/1.5.1/source.json": "aa903e1bcbdfa1580f2b8e2d55100b7c18bc92d779ebb507fec896c75635f7bd",
     "https://bcr.bazel.build/modules/rules_rust/0.51.0/MODULE.bazel": "2b6d1617ac8503bfdcc0e4520c20539d4bba3a691100bee01afe193ceb0310f9",
@@ -436,7 +436,7 @@
     },
     "@@aspect_rules_js+//npm:extensions.bzl%pnpm": {
       "general": {
-        "bzlTransitiveDigest": "vAbdHSkoKK8NRz4vzLWPLIpIzlubZazFkvC4q56T/Pw=",
+        "bzlTransitiveDigest": "ZDKWAI4Jj7Xd4nkXhyIkx59bONqlhxBoqxLUrsAYJnU=",
         "usagesDigest": "DsYGwiP9vRoYpWh/bRcwizmkSFpg1vs5moru+TUGD4c=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -629,145 +629,6 @@
             "aspect_tools_telemetry+",
             "bazel_skylib",
             "bazel_skylib+"
-          ]
-        ]
-      }
-    },
-    "@@buildifier_prebuilt+//:defs.bzl%buildifier_prebuilt_deps_extension": {
-      "general": {
-        "bzlTransitiveDigest": "qutGV+4qwAvWjeGNkFjX+tqkSCPbL129CcCePdkLkJU=",
-        "usagesDigest": "m+RORtK3MOrJs2auGj/7mY7N11R7swVsHYHg1jls5hs=",
-        "recordedFileInputs": {},
-        "recordedDirentsInputs": {},
-        "envVariables": {},
-        "generatedRepoSpecs": {
-          "buildifier_darwin_amd64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-darwin-amd64"
-              ],
-              "downloaded_file_path": "buildifier",
-              "executable": true,
-              "sha256": "eeb47b2de27f60efe549348b183fac24eae80f1479e8b06cac0799c486df5bed"
-            }
-          },
-          "buildifier_darwin_arm64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-darwin-arm64"
-              ],
-              "downloaded_file_path": "buildifier",
-              "executable": true,
-              "sha256": "fa07ba0d20165917ca4cc7609f9b19a8a4392898148b7babdf6bb2a7dd963f05"
-            }
-          },
-          "buildifier_linux_amd64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-linux-amd64"
-              ],
-              "downloaded_file_path": "buildifier",
-              "executable": true,
-              "sha256": "be63db12899f48600bad94051123b1fd7b5251e7661b9168582ce52396132e92"
-            }
-          },
-          "buildifier_linux_arm64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-linux-arm64"
-              ],
-              "downloaded_file_path": "buildifier",
-              "executable": true,
-              "sha256": "18540fc10f86190f87485eb86963e603e41fa022f88a2d1b0cf52ff252b5e1dd"
-            }
-          },
-          "buildifier_windows_amd64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-windows-amd64.exe"
-              ],
-              "downloaded_file_path": "buildifier.exe",
-              "executable": true,
-              "sha256": "da8372f35e34b65fb6d997844d041013bb841e55f58b54d596d35e49680fe13c"
-            }
-          },
-          "buildozer_darwin_amd64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-darwin-amd64"
-              ],
-              "downloaded_file_path": "buildozer",
-              "executable": true,
-              "sha256": "d29e347ecd6b5673d72cb1a8de05bf1b06178dd229ff5eb67fad5100c840cc8e"
-            }
-          },
-          "buildozer_darwin_arm64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-darwin-arm64"
-              ],
-              "downloaded_file_path": "buildozer",
-              "executable": true,
-              "sha256": "9b9e71bdbec5e7223871e913b65d12f6d8fa026684daf991f00e52ed36a6978d"
-            }
-          },
-          "buildozer_linux_amd64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-linux-amd64"
-              ],
-              "downloaded_file_path": "buildozer",
-              "executable": true,
-              "sha256": "8dfd6345da4e9042daa738d7fdf34f699c5dfce4632f7207956fceedd8494119"
-            }
-          },
-          "buildozer_linux_arm64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-linux-arm64"
-              ],
-              "downloaded_file_path": "buildozer",
-              "executable": true,
-              "sha256": "6559558fded658c8fa7432a9d011f7c4dcbac6b738feae73d2d5c352e5f605fa"
-            }
-          },
-          "buildozer_windows_amd64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_file",
-            "attributes": {
-              "urls": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-windows-amd64.exe"
-              ],
-              "downloaded_file_path": "buildozer.exe",
-              "executable": true,
-              "sha256": "e7f05bf847f7c3689dd28926460ce6e1097ae97380ac8e6ae7147b7b706ba19b"
-            }
-          },
-          "buildifier_prebuilt_toolchains": {
-            "repoRuleId": "@@buildifier_prebuilt+//:defs.bzl%_buildifier_toolchain_setup",
-            "attributes": {
-              "assets_json": "[{\"arch\":\"amd64\",\"name\":\"buildifier\",\"platform\":\"darwin\",\"sha256\":\"eeb47b2de27f60efe549348b183fac24eae80f1479e8b06cac0799c486df5bed\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildifier\",\"platform\":\"darwin\",\"sha256\":\"fa07ba0d20165917ca4cc7609f9b19a8a4392898148b7babdf6bb2a7dd963f05\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildifier\",\"platform\":\"linux\",\"sha256\":\"be63db12899f48600bad94051123b1fd7b5251e7661b9168582ce52396132e92\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildifier\",\"platform\":\"linux\",\"sha256\":\"18540fc10f86190f87485eb86963e603e41fa022f88a2d1b0cf52ff252b5e1dd\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildifier\",\"platform\":\"windows\",\"sha256\":\"da8372f35e34b65fb6d997844d041013bb841e55f58b54d596d35e49680fe13c\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildozer\",\"platform\":\"darwin\",\"sha256\":\"d29e347ecd6b5673d72cb1a8de05bf1b06178dd229ff5eb67fad5100c840cc8e\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildozer\",\"platform\":\"darwin\",\"sha256\":\"9b9e71bdbec5e7223871e913b65d12f6d8fa026684daf991f00e52ed36a6978d\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildozer\",\"platform\":\"linux\",\"sha256\":\"8dfd6345da4e9042daa738d7fdf34f699c5dfce4632f7207956fceedd8494119\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildozer\",\"platform\":\"linux\",\"sha256\":\"6559558fded658c8fa7432a9d011f7c4dcbac6b738feae73d2d5c352e5f605fa\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildozer\",\"platform\":\"windows\",\"sha256\":\"e7f05bf847f7c3689dd28926460ce6e1097ae97380ac8e6ae7147b7b706ba19b\",\"version\":\"v6.4.0\"}]"
-            }
-          }
-        },
-        "recordedRepoMappingEntries": [
-          [
-            "buildifier_prebuilt+",
-            "bazel_skylib",
-            "bazel_skylib+"
-          ],
-          [
-            "buildifier_prebuilt+",
-            "bazel_tools",
-            "bazel_tools"
           ]
         ]
       }
@@ -1177,7 +1038,7 @@
     },
     "@@rules_multitool+//multitool:extension.bzl%multitool": {
       "general": {
-        "bzlTransitiveDigest": "BuzDnGo8QYgrRxsdQbR8Cd3bEgp6yV/EqBBVv95qiM0=",
+        "bzlTransitiveDigest": "qZcAsjxoUUYjzNIf43ToTnVAZs4dTEp+lM/RGlBlF10=",
         "usagesDigest": "aa+zbJ7cnTr3bBcmne3T9yaH39eqfwIRrjDu03AoL88=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},

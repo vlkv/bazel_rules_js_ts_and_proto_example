@@ -1,5 +1,4 @@
 load("@aspect_rules_js//js:defs.bzl", "js_library")
-
 load("@rules_python//python:defs.bzl", "py_library")
 
 # NOTE: We need to wrap filegroup with a js_library because ts_project on the other side does not allow to use

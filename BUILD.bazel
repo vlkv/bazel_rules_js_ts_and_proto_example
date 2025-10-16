@@ -1,5 +1,7 @@
 load("@aspect_rules_js//js:defs.bzl", "js_library")
 load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
+load("@bazel_env.bzl", "bazel_env")
+load("@buildifier_prebuilt//:rules.bzl", "buildifier")
 load("@gazelle//:def.bzl", "gazelle")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
@@ -31,3 +33,24 @@ compile_pip_requirements(
 )
 
 gazelle(name = "gazelle")
+
+# To run buildifier directly use this:
+# bazel run -- @buildifier_prebuilt//:buildifier --version
+# BUT: It is much better to use bazel_env instead. See //:bazel_env
+buildifier(
+    name = "buildifier",
+    exclude_patterns = [
+        "./.git/*",
+    ],
+    lint_mode = "warn",
+    mode = "diff",
+)
+
+# Run this target: `./bazelisk run //:bazel_env` to setup bazel_env, follow its instructions
+bazel_env(
+    name = "bazel_env",
+    tools = {
+        "buildifier": "@buildifier_prebuilt//:buildifier",
+        "go": "@rules_go//go",
+    },
+)
