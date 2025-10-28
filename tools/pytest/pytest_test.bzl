@@ -7,9 +7,9 @@ def pytest_test(name, srcs, deps = [], args = [], **kwargs):
     py_test(
         name = name,
         srcs = [
-            "//backend/tools/pytest:pytest_wrapper.py",
+            "//tools/pytest:pytest_wrapper.py",
         ] + srcs,
-        main = "//backend/tools/pytest:pytest_wrapper.py",
+        main = "//tools/pytest:pytest_wrapper.py",
         args = [
             "--capture=no",
             "-vvv",

@@ -1,5 +1,5 @@
 load("@rules_python//python:defs.bzl", "py_binary")
-load("//backend/tools/pytest:pytest_test.bzl", "pytest_test")
+load("//tools/pytest:pytest_test.bzl", "pytest_test")
 
 py_binary(
     name = "pyapp",
