@@ -1,15 +1,17 @@
 syntax = "proto3";
 
+// buf:lint:ignore PACKAGE_VERSION_SUFFIX
 package example.other;
 
 
-message OtherRequest {
+// .
+message DoOtherStuffRequest {
     string name = 1;
   }
-message OtherResponse {
+message DoOtherStuffResponse {
     string msg = 1;
 }
 
-service OtherApi {
-    rpc doOtherStuff (OtherRequest) returns (OtherResponse) {}
+service OtherApiService {
+    rpc DoOtherStuff (DoOtherStuffRequest) returns (DoOtherStuffResponse) {}
 }

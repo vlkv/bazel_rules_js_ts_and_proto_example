@@ -31,7 +31,6 @@ python_grpc_library(
 
 go_proto_library(
     name = "other_go_proto",
-    compilers = ["@io_bazel_rules_go//proto:go_grpc_v2"],
     importpath = "monorepo.local/backend/proto/example/other",
     proto = ":other_proto",
     visibility = ["//visibility:public"],

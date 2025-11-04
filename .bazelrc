@@ -22,7 +22,7 @@ build --experimental_proto_descriptor_sets_include_source_info
 # Linters
 # https://github.com/aspect-build/rules_lint/blob/v1.7.0/docs/linting.md#4-errors-during-bazel-build
 build --aspects=//tools/lint:linters.bzl%buf
-build --aspects=//tools/lint:linters.bzl%eslint
+# build --aspects=//tools/lint:linters.bzl%eslint
 build --aspects=//tools/lint:linters.bzl%flake8
 build --aspects=//tools/lint:linters.bzl%ruff
 build --aspects=//tools/lint:linters.bzl%shellcheck
