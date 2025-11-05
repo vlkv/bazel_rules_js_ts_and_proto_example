@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_binary")
+load("@aspect_rules_py//py:defs.bzl", "py_binary")
 load("//tools/pytest:pytest_test.bzl", "pytest_test")
 
 py_binary(

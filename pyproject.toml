@@ -5,7 +5,11 @@ requires-python = ">=3.11"
 
 # NOTE: After you edit dependencies, call `./bazelisk run //:requirements.update` to update requirements_lock.txt file
 dependencies = [
-    "requests",
-    "pytest",
+    "bazel-runfiles",
+    "docker",
     "flake8",
+    "pytest",
+    "redis",
+    "requests",
+    "testcontainers",
 ]

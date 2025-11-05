@@ -1,0 +1,36 @@
+load("@rules_oci//oci:defs.bzl", "oci_image", "oci_load")
+load("//tools/pytest:pytest_test.bzl", "pytest_test")
+
+oci_image(
+    name = "redis_image",
+    base = "@redis",
+)
+
+oci_load(
+    name = "redis_load",
+    image = ":redis_image",
+    repo_tags = ["monorepo.local/itest_redis:latest"],
+)
+
+# This creates file `bazel-bin/backend/itest/redis_load/tarball.tar` that we read in itest.py code
+filegroup(
+    name = "redis_tar",
+    srcs = [":redis_load"],
+    output_group = "tarball",
+)
+
+# This test was inspired by https://blog.aspect.build/integration-testing-oci
+pytest_test(
+    name = "itest",
+    srcs = [
+        "itest.py",
+    ],
+    data = [":redis_tar"],
+    imports = ["."],
+    deps = [
+        "@pypi//bazel_runfiles",
+        "@pypi//docker",
+        "@pypi//redis",
+        "@pypi//testcontainers",
+    ],
+)
